@@ -17,6 +17,7 @@ def get_scrapped_chip():
     return 200
 
 
+# 调用GPT API
 def call_gpt_api(messages, tools):
     client = openai.OpenAI(
         base_url="https://api.xiaoai.plus/v1",
@@ -28,3 +29,13 @@ def call_gpt_api(messages, tools):
         tools=tools,
     )
     return completion
+
+
+# 调用openai embedded api
+def call_openai_embedded_api(messages, tools):
+
+    model = 'text-embedding-3-small'
+    response = openai.embeddings.create(input=[messages], model=model)
+    print(response.data[0].embedding)
+
+    return response

@@ -153,6 +153,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # 本地调试前端地址
     "http://localhost:9500",  # micro-app调试前端地址"
     "http://47.119.23.43:9602"  # 阿里服务器前端地址
+    "http://47.119.23.43:9600"  # 阿里服务器前端地址
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [

@@ -85,22 +85,22 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'chip_process_database',  # 替换为你的数据库名
-        'USER': 'root',  # 替换为你的数据库用户名
-        'PASSWORD': 'huangzuxi',  # 替换为你的数据库密码
-        'HOST': '127.0.0.1',  # 替换为你的数据库主机地址
-        'PORT': '3306',  # 替换为你的数据库端口，默认是3306
-    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'casildatabase',  # 替换为你的数据库名
-    #     'USER': 'casil',  # 替换为你的数据库用户名
-    #     'PASSWORD': 'casil@123456',  # 替换为你的数据库密码
-    #     'HOST': '47.119.23.43',  # 替换为你的数据库主机地址
+    #     'NAME': 'chip_process_database',  # 替换为你的数据库名
+    #     'USER': 'root',  # 替换为你的数据库用户名
+    #     'PASSWORD': 'huangzuxi',  # 替换为你的数据库密码
+    #     'HOST': '127.0.0.1',  # 替换为你的数据库主机地址
     #     'PORT': '3306',  # 替换为你的数据库端口，默认是3306
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'casildatabase',  # 替换为你的数据库名
+        'USER': 'casil',  # 替换为你的数据库用户名
+        'PASSWORD': 'casil@123456',  # 替换为你的数据库密码
+        'HOST': '47.119.23.43',  # 替换为你的数据库主机地址
+        'PORT': '3306',  # 替换为你的数据库端口，默认是3306
+    }
 }
 
 
@@ -152,4 +152,5 @@ OPENAI_API_KEY = 'sk-wpAHmQZR4Ipv1rRa57452f31449c4b55BfE697DfA1BeB2F2'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # 本地调试前端地址
     "http://localhost:9500",  # micro-app调试前端地址"
+    "http://47.119.23.43:9602"  # 阿里服务器前端地址
 ]

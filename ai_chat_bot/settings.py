@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i=u18$=+!o$db_en^_*tt#w7riq&fp!fb@#z(8pn!=x1a6#dij
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['47.119.23.43', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -153,4 +153,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # 本地调试前端地址
     "http://localhost:9500",  # micro-app调试前端地址"
     "http://47.119.23.43:9602"  # 阿里服务器前端地址
+]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'x-csrftoken',
+    'x-requested-with',
 ]
